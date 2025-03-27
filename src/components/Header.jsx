@@ -1,35 +1,61 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { Sun, Moon } from "lucide-react"; // Importing icons
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+
+  // Toggle Theme
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   return (
-    <header className="bg-white shadow-md dark:bg-gray-900">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <header className="bg-[#02343F] text-[#F0EDCC]">
+      <nav className="container px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <a href="/" className="flex items-center">
+          <a
+            href="/"
+            className="text-text-light dark:text-text-dark text-xl font-bold"
+          >
             Javad Naqvi
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex space-x-8">
+          <div className="hidden lg:flex lg:items-center space-x-8">
             {["Home", "Resume", "Services", "Portfolio", "Contact"].map(
               (item, index) => (
                 <a
                   key={index}
                   href="#"
-                  className="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-white transition-colors"
+                  className="text-text-light dark:text-text-dark hover:text-primary-light dark:hover:text-primary-dark transition-colors"
                 >
                   {item}
                 </a>
               )
             )}
+            {/* Theme Toggle Button */}
+            <motion.button
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              className="p-2 rounded-md border-none outline-none"
+              whileTap={{ scale: 0.8 }}
+              animate={{ rotate: theme === "dark" ? 180 : 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              {theme === "dark" ? <Sun size={24} /> : <Moon size={24} />}
+            </motion.button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-gray-700 dark:text-white p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-700"
+            className="lg:hidden text-text-light dark:text-text-dark p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle Menu"
           >
@@ -55,14 +81,16 @@ export default function Header() {
 
         {/* Mobile Menu */}
         <div
-          className={`${isOpen ? "block" : "hidden"} lg:hidden mt-4 space-y-2`}
+          className={`${
+            isOpen ? "block" : "hidden"
+          } lg:hidden mt-4 space-y-2 bg-background-light dark:bg-background-dark p-4 rounded-md`}
         >
           {["Home", "Resume", "Services", "Portfolio", "Contact"].map(
             (item, index) => (
               <a
                 key={index}
                 href="#"
-                className="block px-4 py-2 text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800 rounded-md transition"
+                className="block px-4 py-2 text-text-light dark:text-text-dark hover:bg-secondary-light dark:hover:bg-secondary-dark rounded-md transition"
               >
                 {item}
               </a>
