@@ -2,7 +2,10 @@ import React from "react";
 
 export default function Skills() {
   return (
-    <section class="py-10 min-h-screen w-full  md:px-8 xl:px-20 bg-black text-white border-b-[1px] border-dashed border-slate-500 flex items-center">
+    <section
+      id="Services"
+      class="py-10 min-h-screen w-full  md:px-8 xl:px-20 bg-black text-white border-b-[1px] border-dashed border-slate-500 flex items-center"
+    >
       <div class="container flex flex-col md:flex-row items-center md:items-start gap-16 w-full">
         {/*  Left Side */}
         <div class="w-full md:w-1/2 relative p-6 sm:px-28 md:p-0">

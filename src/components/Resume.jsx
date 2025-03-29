@@ -73,7 +73,10 @@ const ExperienceItem = ({ exp }) => (
 
 const Qualification = () => {
   return (
-    <div className="py-5 px-4 bg-black text-white border-b-[1px] border-dashed border-slate-500">
+    <div
+      id="Resume"
+      className="py-5 px-4 bg-black text-white border-b-[1px] border-dashed border-slate-500"
+    >
       <div className="container flex flex-wrap w-full header mb-8">
         <div className="w-full sm:w-1/2 mb-6 sm:mb-0 flex flex-col gap-5 text-white">
           <h2 className="text-3xl md:text-4xl font-bold text-left text-white">

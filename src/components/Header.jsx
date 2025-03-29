@@ -34,7 +34,7 @@ export default function Header() {
               (item, index) => (
                 <a
                   key={index}
-                  href="#"
+                  href={`#${item}`}
                   className="text-text-light dark:text-text-dark hover:text-primary-light dark:hover:text-primary-dark transition-colors"
                 >
                   {item}
@@ -89,7 +89,7 @@ export default function Header() {
             (item, index) => (
               <a
                 key={index}
-                href="#"
+                href={`#${item}`}
                 className="block px-4 py-2 text-text-light dark:text-text-dark hover:bg-secondary-light dark:hover:bg-secondary-dark rounded-md transition"
               >
                 {item}

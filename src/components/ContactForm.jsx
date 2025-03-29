@@ -16,7 +16,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section className=" bg-black text-white">
+    <section id="Contact" className="bg-black text-white">
       <div className="container py-8 lg:pt-16 lg:pb-8 px-4 mx-auto max-w-screen-md">
         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-white dark:text-white">
           Contact Us

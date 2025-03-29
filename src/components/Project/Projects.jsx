@@ -20,7 +20,7 @@ const projects = [
 export default function Projects() {
   return (
     <section
-      id="projects"
+      id="Portfolio"
       className="py-16 bg-black text-white border-b-[1px] border-dashed border-slate-500"
     >
       <div className="container px-6">

@@ -27,7 +27,10 @@ const CanadaFlag = () => (
 
 export default function About() {
   return (
-    <div className="bg-black text-white border-b-[1px] border-dashed border-slate-500/50 relative overflow-hidden">
+    <div
+      id="about"
+      className="bg-black text-white border-b-[1px] border-dashed border-slate-500/50 relative overflow-hidden"
+    >
       {/* Animated background elements */}
       <motion.div
         className="absolute top-20 left-10 w-4 h-4 rounded-full bg-purple-500/20"

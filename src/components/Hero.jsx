@@ -3,10 +3,13 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Hero() {
   return (
-    <div className="bg-black text-white border-b-[1px] border-dashed border-slate-500">
-      <section className="container flex flex-col items-center justify-center min-h-screen text-center p-6">
+    <div
+      id="Home"
+      className="bg-black text-white border-b-[1px] border-dashed border-slate-500"
+    >
+      <section className="container flex flex-col items-center justify-center min-h-screen text-center p-6 px-3 md:px-6">
         <motion.h1
-          className="text-5xl font-bold mb-4"
+          className="text-3xl md:text-5xl font-bold mb-4"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
