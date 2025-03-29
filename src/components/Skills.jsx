@@ -2,14 +2,14 @@ import React from "react";
 
 export default function Skills() {
   return (
-    <section class="container py-10 min-h-screen w-full  md:px-8 xl:px-20 bg-[#F0EDCC] text-[#02343F] flex items-center">
-      <div class="flex flex-col md:flex-row items-center md:items-start gap-16 w-full">
+    <section class="py-10 min-h-screen w-full  md:px-8 xl:px-20 bg-black text-white border-b-[1px] border-dashed border-slate-500 flex items-center">
+      <div class="container flex flex-col md:flex-row items-center md:items-start gap-16 w-full">
         {/*  Left Side */}
         <div class="w-full md:w-1/2 relative p-6 sm:px-28 md:p-0">
-          <div class="text-[#02343F] p-6 pl-10 pr-20 sm:pl-10 lg:pr-20">
+          <div class="text-slate-300 p-6 pl-10 pr-20 sm:pl-10 lg:pr-20">
             {/*  Vertical Text */}
             <div class="absolute -left-4 top-16 sm:left-16 top-20 sm:top-24 md:-left-12 xl:-left-16 md:top-16 xl:top-24 rotate-[-90deg] text-sm tracking-widest flex flex-row justify-start gap-2">
-              <div class="xl:w-16 md:w-10 sm:w-8 w-8 h-[2px] bg-[#02343F] mt-2 mx-auto"></div>
+              <div class="xl:w-16 md:w-10 sm:w-8 w-8 h-[2px]  mt-2 mx-auto"></div>
               <p>All Skills</p>
             </div>
 
@@ -38,7 +38,7 @@ export default function Skills() {
         <div class="w-full md:w-1/2 flex justify-center items-center ">
           <div class="grid grid-cols-3 md:grid-cols-4 gap-4">
             {/* Static Icons */}
-            <div class="text-center bg-[#02343F] text-[#F0EDCC] ">
+            <div class="text-center bg-[#02343F] text-white ">
               <div class="p-4 bg-secondary rounded-lg shadow-lg flex flex-col justify-center items-center">
                 <span class="text-4xl">
                   <svg
@@ -66,7 +66,7 @@ export default function Skills() {
               </div>
             </div>
 
-            <div class="text-center bg-[#02343F] text-[#F0EDCC]">
+            <div class="text-center bg-[#02343F] text-white">
               <div class="p-4 bg-secondary rounded-lg shadow-lg flex flex-col justify-center items-center">
                 <span class="text-4xl">
                   <svg
@@ -94,7 +94,7 @@ export default function Skills() {
               </div>
             </div>
 
-            <div class="text-center bg-[#02343F] text-[#F0EDCC]">
+            <div class="text-center bg-[#02343F] text-white">
               <div class="p-4 bg-secondary rounded-lg shadow-lg flex flex-col justify-center items-center">
                 <span class="text-4xl">
                   <svg
@@ -118,7 +118,7 @@ export default function Skills() {
               </div>
             </div>
 
-            <div class="text-center bg-[#02343F] text-[#F0EDCC]">
+            <div class="text-center bg-[#02343F] text-white">
               <div class="p-4 bg-secondary rounded-lg shadow-lg flex flex-col justify-center items-center">
                 <span class="text-4xl">
                   <svg
@@ -142,7 +142,7 @@ export default function Skills() {
               </div>
             </div>
 
-            <div class="text-center bg-[#02343F] text-[#F0EDCC]">
+            <div class="text-center bg-[#02343F] text-white">
               <div class="p-4 bg-secondary rounded-lg shadow-lg flex flex-col justify-center items-center">
                 <span class="text-4xl">
                   <svg
@@ -166,7 +166,7 @@ export default function Skills() {
               </div>
             </div>
 
-            <div class="text-center bg-[#02343F] text-[#F0EDCC]">
+            <div class="text-center bg-[#02343F] text-white">
               <div class="p-4 bg-secondary rounded-lg shadow-lg flex flex-col justify-center items-center">
                 <span class="text-4xl">
                   <svg
@@ -198,7 +198,7 @@ export default function Skills() {
               </div>
             </div>
 
-            <div class="text-center bg-[#02343F] text-[#F0EDCC]">
+            <div class="text-center bg-[#02343F] text-white">
               <div class="p-4 bg-secondary rounded-lg shadow-lg flex flex-col justify-center items-center">
                 <span class="text-4xl">
                   <svg
@@ -224,7 +224,7 @@ export default function Skills() {
               </div>
             </div>
 
-            <div class="text-center bg-[#02343F] text-[#F0EDCC]">
+            <div class="text-center bg-[#02343F] text-white">
               <div class="p-4 bg-secondary rounded-lg shadow-lg flex flex-col justify-center items-center">
                 <span class="text-4xl">
                   <svg
@@ -263,7 +263,7 @@ export default function Skills() {
               </div>
             </div>
 
-            <div class="text-center bg-[#02343F] text-[#F0EDCC]">
+            <div class="text-center bg-[#02343F] text-white">
               <div class="p-4 bg-secondary rounded-lg shadow-lg flex flex-col justify-center items-center">
                 <span class="text-4xl">
                   <svg
@@ -299,7 +299,7 @@ export default function Skills() {
               </div>
             </div>
 
-            <div class="text-center bg-[#02343F] text-[#F0EDCC]">
+            <div class="text-center bg-[#02343F] text-white">
               <div class="p-4 bg-secondary rounded-lg shadow-lg flex flex-col justify-center items-center">
                 <span class="text-4xl">
                   <svg
@@ -330,7 +330,7 @@ export default function Skills() {
               </div>
             </div>
 
-            <div class="text-center bg-[#02343F] text-[#F0EDCC]">
+            <div class="text-center bg-[#02343F] text-white">
               <div class="p-4 bg-secondary rounded-lg shadow-lg flex flex-col justify-center items-center">
                 <span class="text-4xl">
                   <svg
@@ -377,7 +377,7 @@ export default function Skills() {
               </div>
             </div>
 
-            <div class="text-center bg-[#02343F] text-[#F0EDCC]">
+            <div class="text-center bg-[#02343F] text-white">
               <div class="p-4 bg-secondary rounded-lg shadow-lg flex flex-col justify-center items-center">
                 <span class="text-4xl">
                   <svg

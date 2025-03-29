@@ -17,7 +17,7 @@ export default function Header() {
   }, [theme]);
 
   return (
-    <header className="bg-[#02343F] text-[#F0EDCC]">
+    <header className="bg-black text-white">
       <nav className="container px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}

@@ -21,10 +21,10 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="container py-16 bg-[#F0EDCC] text-[#02343F] dark:bg-gray-900"
+      className="py-16 bg-black text-white border-b-[1px] border-dashed border-slate-500"
     >
-      <div className="px-6">
-        <h2 className="text-4xl font-bold text-center text-[#02343F] dark:text-white mb-12">
+      <div className="container px-6">
+        <h2 className="text-4xl font-bold text-center text-white dark:text-white mb-12">
           <code>&lt;Projects/&gt;</code>
         </h2>
 
@@ -51,10 +51,10 @@ export default function Projects() {
 
               {/* Project Description */}
               <div className="md:w-1/2">
-                <h3 className="text-xl font-bold text-[#02343F]">
+                <h3 className="text-xl font-bold text-white">
                   {project.title}
                 </h3>
-                <p className="text-[#02343F] mt-2">{project.description}</p>
+                <p className="text-white mt-2">{project.description}</p>
               </div>
             </motion.div>
           ))}

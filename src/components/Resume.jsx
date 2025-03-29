@@ -40,7 +40,7 @@ const education = [
 
 const EducationItem = ({ edu }) => (
   <motion.div
-    className="education-content text-[#F0EDCC] py-[10px] px-[20px] flex gap-[10px] sm:gap-[40px] border-l-[2px] border-[#F0EDCC] border-solid"
+    className="education-content text-white py-[10px] px-[20px] flex gap-[10px] sm:gap-[40px] border-l-[2px] border-[#F0EDCC] border-solid"
     initial={{ opacity: 0, y: 50 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5 }}
@@ -73,17 +73,17 @@ const ExperienceItem = ({ exp }) => (
 
 const Qualification = () => {
   return (
-    <div className="container py-5 px-4  bg-[#02343F] text-[#F0EDCC]">
-      <div className="flex flex-wrap w-full header mb-8">
-        <div className="w-full sm:w-1/2 mb-6 sm:mb-0 flex flex-col gap-5 text-[#F0EDCC]">
-          <h2 className="text-3xl md:text-4xl font-bold text-left text-[#F0EDCC]">
+    <div className="py-5 px-4 bg-black text-white border-b-[1px] border-dashed border-slate-500">
+      <div className="container flex flex-wrap w-full header mb-8">
+        <div className="w-full sm:w-1/2 mb-6 sm:mb-0 flex flex-col gap-5 text-white">
+          <h2 className="text-3xl md:text-4xl font-bold text-left text-white">
             <code>&lt;Education/&gt;</code>
           </h2>
           {education.map((edu, index) => (
             <EducationItem key={index} edu={edu} />
           ))}
         </div>
-        <div className="w-full sm:w-1/2 mb-6 sm:mb-0 flex flex-col gap-5 text-[#F0EDCC]">
+        <div className="w-full sm:w-1/2 mb-6 sm:mb-0 flex flex-col gap-5 text-white">
           <h2 className="text-3xl md:text-4xl font-bold text-left">
             <code>&lt;Experience/&gt;</code>
           </h2>
