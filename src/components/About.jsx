@@ -2,6 +2,29 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Code, Users, Briefcase, Mail, ArrowRight } from "lucide-react";
 
+const IndiaFlag = () => (
+  <svg className="inline mx-1" width="18" height="18" viewBox="0 0 64 64">
+    <rect width="64" height="64" fill="#f93" />
+    <rect width="64" height="42.67" fill="#fff" />
+    <rect width="64" height="21.33" fill="#128807" />
+    <circle cx="32" cy="32" r="6.4" fill="#008" />
+    <circle cx="32" cy="32" r="5.33" fill="#fff" />
+    <circle cx="32" cy="32" r="1.6" fill="#008" />
+  </svg>
+);
+
+const CanadaFlag = () => (
+  <svg className="inline mx-1" width="18" height="18" viewBox="0 0 64 64">
+    <rect width="64" height="64" fill="#f00" />
+    <rect x="16" width="12" height="64" fill="#fff" />
+    <rect y="16" width="64" height="12" fill="#fff" />
+    <polygon
+      points="32,16 36,24 44,24 36,28 40,36 32,30 24,36 28,28 20,24 28,24"
+      fill="#f00"
+    />
+  </svg>
+);
+
 export default function About() {
   return (
     <div className="bg-black text-white border-b-[1px] border-dashed border-slate-500/50 relative overflow-hidden">
