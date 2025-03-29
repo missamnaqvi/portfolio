@@ -1,81 +1,169 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Code, Users, Briefcase } from "lucide-react";
+import { Code, Users, Briefcase, Mail, ArrowRight } from "lucide-react";
 
 export default function About() {
   return (
-    <div className="bg-black text-white border-b-[1px] border-dashed border-slate-500">
-      <section className="container p-8 text-center ">
+    <div className="bg-black text-white border-b-[1px] border-dashed border-slate-500/50 relative overflow-hidden">
+      {/* Animated background elements */}
+      <motion.div
+        className="absolute top-20 left-10 w-4 h-4 rounded-full bg-purple-500/20"
+        animate={{
+          scale: [1, 1.5, 1],
+          opacity: [0.5, 1, 0.5],
+        }}
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+      <motion.div
+        className="absolute bottom-20 right-10 w-6 h-6 rounded-full bg-blue-500/20"
+        animate={{
+          scale: [1, 1.8, 1],
+          opacity: [0.3, 0.7, 0.3],
+        }}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 1,
+        }}
+      />
+
+      <section className="container p-8 text-center relative z-10">
         {/* Animated Header */}
-        <motion.h1
-          className="text-4xl text-white font-bold bg-gradient-to-r from-purple-500 to-indigo-500  bg-clip-text"
+        <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          {/* About Me */}
-          <code>&lt;About Me/&gt;</code>
-          {/* <p>&lt;About Me /&gt;</p> */}
-        </motion.h1>
+          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-indigo-500 bg-clip-text text-transparent inline-block">
+            <code>&lt;About Me/&gt;</code> 👨‍💻
+          </h1>
+          <motion.div
+            className="w-24 h-1 bg-gradient-to-r from-purple-500 to-indigo-500 mx-auto mt-2 rounded-full"
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+          />
+        </motion.div>
 
         {/* Short Introduction */}
-        <motion.p
-          className="text-white mt-4 text-lg"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
+        <motion.div
+          className="max-w-3xl mx-auto mt-8"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 1 }}
         >
-          I'm a passionate{" "}
-          <span className="font-semibold">Full Stack Developer</span> with
-          expertise in building web applications using modern technologies. I
-          specialize in{" "}
-          <span className="text-indigo-500 font-semibold">
-            React, Next.js, Node.js, PHP
-          </span>
-          , and database management.
-        </motion.p>
+          <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+            I'm a passionate{" "}
+            <span className="font-semibold text-white">
+              Full Stack Developer
+            </span>{" "}
+            🚀 with expertise in building modern web applications. I specialize
+            in{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400 font-semibold">
+              React, Next.js, Node.js, PHP
+            </span>{" "}
+            and database management. Currently pursuing my studies in Canada 🇨🇦
+            while originally from India 🇮🇳.
+          </p>
+
+          <motion.p
+            className="text-lg md:text-xl text-gray-300 mt-6 leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7, duration: 0.8 }}
+          >
+            Beyond coding 💻, I love helping others—especially students and
+            professionals transitioning to Canada. If you're from India and have
+            any queries about moving to Canada, feel free to reach out! 📩 I
+            respond to all messages every Sunday 📅 and will do my best to
+            assist you! ✨
+          </motion.p>
+        </motion.div>
 
         {/* Animated Stats Section */}
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <motion.div
-            className="p-6 bg-slate-600 dark:bg-gray-800 rounded-lg shadow-lg flex flex-col items-center"
-            whileHover={{ scale: 1.1 }}
-          >
-            <Code size={36} className="text-purple-500" />
-            <h3 className="mt-3 text-lg font-semibold text-white">
-              3+ Years of Coding
-            </h3>
-          </motion.div>
-
-          <motion.div
-            className="p-6 bg-slate-600 dark:bg-gray-800 rounded-lg shadow-lg flex flex-col items-center"
-            whileHover={{ scale: 1.1 }}
-          >
-            <Users size={36} className="text-blue-500" />
-            <h3 className="mt-3 text-lg font-semibold text-white">
-              10+ Happy Clients
-            </h3>
-          </motion.div>
-
-          <motion.div
-            className="p-6 bg-slate-600 rounded-lg shadow-lg flex flex-col items-center"
-            whileHover={{ scale: 1.1 }}
-          >
-            <Briefcase size={36} className="text-green-500" />
-            <h3 className="mt-3 text-lg font-semibold text-white">
-              5+ Completed Projects
-            </h3>
-          </motion.div>
-        </div>
+        <motion.div
+          className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.9, duration: 1 }}
+        >
+          {[
+            {
+              icon: <Code size={36} className="text-purple-500" />,
+              text: "3+ Years of Coding",
+              emoji: "🧑‍💻",
+            },
+            {
+              icon: <Users size={36} className="text-blue-500" />,
+              text: "10+ Happy Clients",
+              emoji: "😊",
+            },
+            {
+              icon: <Briefcase size={36} className="text-green-500" />,
+              text: "5+ Completed Projects",
+              emoji: "🚀",
+            },
+          ].map((item, index) => (
+            <motion.div
+              key={index}
+              className="p-6 bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl shadow-lg flex flex-col items-center border border-gray-700/50 hover:border-purple-500/30 transition-all"
+              whileHover={{
+                scale: 1.05,
+                y: -5,
+                boxShadow: "0 10px 25px -5px rgba(124, 58, 237, 0.3)",
+              }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1 + index * 0.1, duration: 0.5 }}
+            >
+              {item.icon}
+              <h3 className="mt-3 text-lg font-semibold text-white flex items-center">
+                {item.text} <span className="ml-2">{item.emoji}</span>
+              </h3>
+            </motion.div>
+          ))}
+        </motion.div>
 
         {/* Contact Button */}
-        <motion.a
-          href="/contact"
-          className="mt-8 inline-block px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg text-lg font-medium shadow-lg hover:from-blue-600 hover:to-purple-600 transform hover:scale-105 transition-all duration-300"
-          whileHover={{ scale: 1.1 }}
+        <motion.div
+          className="mt-12"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.3, duration: 0.8 }}
         >
-          Get in Touch
-        </motion.a>
+          <motion.a
+            href="/contact"
+            className="group inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg text-lg font-medium shadow-xl hover:shadow-purple-500/20 transition-all duration-300 overflow-hidden"
+            whileHover={{ scale: 1.05 }}
+          >
+            <span className="relative z-10 flex items-center">
+              <Mail className="mr-2" size={20} />
+              Get in Touch
+              <ArrowRight
+                className="ml-2 group-hover:translate-x-1 transition-transform"
+                size={18}
+              />
+            </span>
+            <motion.span
+              className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              initial={{ opacity: 0 }}
+            />
+          </motion.a>
+
+          <motion.p
+            className="mt-4 text-gray-400 text-sm"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.5, duration: 0.8 }}
+          >
+            I'm always happy to help with Canada queries! 🇮🇳→🇨🇦
+          </motion.p>
+        </motion.div>
       </section>
     </div>
   );
