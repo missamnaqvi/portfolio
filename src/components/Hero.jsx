@@ -7,7 +7,7 @@ export default function Hero() {
       id="Home"
       className="bg-black text-white border-b-[1px] border-dashed border-slate-500"
     >
-      <section className="container flex flex-col items-center justify-center min-h-screen text-center p-6 px-3 md:px-6">
+      <section className="container flex flex-col items-center justify-center text-center p-6 px-3 md:px-6">
         <motion.p
           className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
           initial={{ opacity: 0, y: -50 }}

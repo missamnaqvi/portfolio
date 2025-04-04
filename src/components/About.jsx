@@ -58,7 +58,7 @@ export default function About() {
         }}
       />
 
-      <section className="container p-8 text-center relative z-10">
+      <section className="container px-[15px] md:p-8 text-center relative z-10">
         {/* Animated Header */}
         <motion.div
           initial={{ opacity: 0, y: -50 }}
