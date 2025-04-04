@@ -8,14 +8,14 @@ export default function Hero() {
       className="bg-black text-white border-b-[1px] border-dashed border-slate-500"
     >
       <section className="container flex flex-col items-center justify-center min-h-screen text-center p-6 px-3 md:px-6">
-        <motion.h1
-          className="text-3xl md:text-5xl font-bold mb-4"
+        <motion.p
+          className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           Hi, I'm <span className="text-blue-400">Javad Naqvi</span>
-        </motion.h1>
+        </motion.p>
         <motion.p
           className="text-xl text-slate-500 max-w-2xl"
           initial={{ opacity: 0, y: 50 }}
